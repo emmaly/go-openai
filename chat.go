@@ -36,8 +36,8 @@ type ChatCompletionFunction struct {
 	Parameters  struct {
 		Type       string                                               `json:"type"`
 		Properties map[string]ChatCompletionFunctionParameterProperties `json:"properties"`
-		Required   []string                                             `json:"required"`
-	} `json:"parameters"`
+		Required   []string                                             `json:"required,omitempty"`
+	} `json:"parameters,omitempty"`
 }
 
 type ChatCompletionFunctionParameterProperties struct {
